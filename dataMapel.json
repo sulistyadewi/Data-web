@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "mapel": "IPA"
+  },
+  {
+    "id": "2",
+    "mapel": "IPS"
+  },
+  {
+    "id": "3",
+    "mapel": "Matematika"
+  },
+  {
+    "id": "4",
+    "mapel": "PKN"
+  },
+  {
+    "id": "5",
+    "mapel": "Agama"
+  },
+  {
+    "id": "6",
+    "mapel": "B.Inggris"
+  },
+  {
+    "id": "7",
+    "mapel": "Seni Budaya"
+  },
+  {
+    "id": "8",
+    "mapel": "PJOK"
+  }
+]
