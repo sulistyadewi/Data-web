@@ -22,13 +22,5 @@
     "email": "sitinurhayati@mail.com",
     "gender": "female",
     "birth_date": "12-05-2005"
-  },
-  {
-    "id": 4,
-    "first_name": "Rika",
-    "last_name": "Risti",
-    "email": "rikaristi@mail.com",
-    "gender": "female",
-    "birth_date": "03-01-2005"
   }
 ]
