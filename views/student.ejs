@@ -64,19 +64,19 @@
         <th class="action"></th>
       </tr>
       <% student.foreach(item => { %>
-        <tr>
-          <td>1</td>
-          <td><%= item.first_name %></td>
-          <td>Santoso</td>
-          <td>jokosantoso@mail.com</td>
-          <td>male</td>
-          <td>28-04-2004</td>
-          <td>
-            <a href="#" class="edit">Edit</a>
-            <span>|</span>
-            <a href="#" class="remove">Remove</a>
-          </td>
-        </tr>
+      <tr>
+        <td>1</td>
+        <td><%= item.first_name %></td>
+        <td><%= item.last_name %></td>
+        <td><%= item.email %></td>
+        <td><%= item.gender %></td>
+        <td><%= item.birth_date</td>
+        <td>
+          <a href="#" class="edit">Edit</a>
+          <span>|</span>
+          <a href="#" class="remove">Remove</a>
+        </td>
+      </tr>
       <%})%>
     </table>
   </body>

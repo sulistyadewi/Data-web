@@ -62,54 +62,20 @@
         <th>Gender</th>
         <th class="action"></th>
       </tr>
+      <% student.foreach(item => { %>
       <tr>
         <td>1</td>
-        <td>Aditya</td>
-        <td>Firdaus</td>
-        <td>adityafirdaus@mail.com</td>
-        <td>male</td>
+        <td><%= item.first_name %></td>
+        <td><%= item.last_name %></td>
+        <td><%= item.email %></td>
+        <td><%= item.gender %></td>
         <td>
           <a href="#" class="edit">Edit</a>
           <span>|</span>
           <a href="#" class="remove">Remove</a>
         </td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>Ridwan</td>
-        <td>Hafiz</td>
-        <td>ridwanhafiz@mail.com</td>
-        <td>male</td>
-        <td>
-          <a href="#" class="edit">Edit</a>
-          <span>|</span>
-          <a href="#" class="remove">Remove</a>
-        </td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Lili</td>
-        <td>Fitriyani</td>
-        <td>lilifitriyani@mail.com</td>
-        <td>female</td>
-        <td>
-          <a href="#" class="edit">Edit</a>
-          <span>|</span>
-          <a href="#" class="remove">Remove</a>
-        </td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Alia</td>
-        <td>Izzah</td>
-        <td>aliaizzah@mail.com</td>
-        <td>female</td>
-        <td>
-          <a href="#" class="edit">Edit</a>
-          <span>|</span>
-          <a href="#" class="remove">Remove</a>
-        </td>
-      </tr>
+      <%})%>
     </table>
   </body>
 </html>

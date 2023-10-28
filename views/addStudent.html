@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: rgb(161, 157, 157);
+        margin: auto;
+        border-radius: 5px;
+        width: 50%;
+        margin-top: 20px;
+      }
+      form {
+        padding: 20px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-top: 6px;
+      }
+      input {
+        margin-top: 6px;
+        height: 3rem;
+        border-radius: 5px;
+        outline: white;
+      }
+    .button{
+        margin-top: 15px;
+        background-color: blue;
+        color: white;
+        outline: none;
+        width: 8rem;
+        height: 2.5rem;
+        border-radius: 8px;
+      }
+      .button div {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div>
+          <label for="">First Name</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label for="">Last Name</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input type="email" />
+        </div>
+        <div>
+          <label for="">Gender</label>
+          <input type="checkbox" name="" id="male" />
+          <input type="checkbox" name="" id="female" />
+        </div>
+        <div>
+          <label for="">Birth Date</label>
+          <input type="date" name="" id="date" />
+        </div>
+        <div class="button">
+            <div>Submit</div>
+      </form>
+    </div>
+  </body>
+</html>
