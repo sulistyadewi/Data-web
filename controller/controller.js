@@ -1,7 +1,16 @@
-const student = require("../models/modelStudent");
+const Student = require("../models/modelStudent");
 
-console.log(student, "dari controller");
+// console.log(student, "dari controller");
 class Controller {
-    // const modelStudent = student.student()
+    static showStudent(req, res){
+        Student.showAll((err, data) => {
+            if (err) {
+                res.send(err)
+            }else {
+                res.render("student", {data})
+            }
+            // res.send(data)
+        })
+    }
 }
-module.export = Controller;
+module.exports = Controller;

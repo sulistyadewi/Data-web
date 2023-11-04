@@ -1,5 +1,5 @@
 // const { json } = require("express/lib/response");
-const { error } = require("console");
+// const { error } = require("console");
 const fs = require("fs");
 
 class Student {
@@ -19,22 +19,22 @@ class StudentModel {
       if (err) {
         cb(err, null);
       } else {
-        const student = JSON.parse(data);
+        data = JSON.parse(data);
         const dataStudent = [];
-        for (let i = 0; i < student.length; i++) {
+        for (let i = 0; i < data.length; i++) {
           dataStudent.push(
-            new Siswa(
-              student[i].id,
-              student[i].first_name,
-              student[i].last_name,
-              student[i].email,
-              student[i].gender,
-              student[i].birth_date
+            new Student(
+              data[i].id,
+              data[i].first_name,
+              data[i].last_name,
+              data[i].email,
+              data[i].gender,
+              data[i].birth_date
             )
           );
         }
-        cb(null, data);
-        console.log(data, "ini data");
+        cb(null, dataStudent);
+        // console.log(dataStudent, "ini data");
       }
     });
   }
