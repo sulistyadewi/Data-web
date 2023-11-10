@@ -22,5 +22,37 @@
     "email": "sitinurhayati@mail.com",
     "gender": "female",
     "birth_date": "12-05-2005"
+  },
+  {
+    "id": 4,
+    "first_name": "siti",
+    "last_name": "siti",
+    "email": "sitisiti@email.com",
+    "gender": "female",
+    "birth_date": "2023-11-07"
+  },
+  {
+    "id": 5,
+    "first_name": "siti",
+    "last_name": "siti",
+    "email": "sitisiti@email.com",
+    "gender": "female",
+    "birth_date": "2023-11-07"
+  },
+  {
+    "id": 6,
+    "first_name": "siti",
+    "last_name": "siti",
+    "email": "sitisiti@email.com",
+    "gender": "female",
+    "birth_date": "2023-11-01"
+  },
+  {
+    "id": 7,
+    "first_name": "lia",
+    "last_name": "lia",
+    "email": "lialia@email.com",
+    "gender": "female",
+    "birth_date": "2023-11-25"
   }
 ]

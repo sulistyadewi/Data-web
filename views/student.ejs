@@ -12,6 +12,7 @@
       }
       h1 {
         text-align: center;
+        margin-top: 10px;
         margin-bottom: 20px;
       }
       table {
@@ -49,6 +50,19 @@
         font-weight: bold;
         color: rgb(172, 172, 172);
       }
+      button {
+        background-color: blue;
+        font-style: none;
+        width: 5rem;
+        height: 2rem;
+        margin-left: 57rem;
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+      button a {
+        color: white;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -66,22 +80,23 @@
         </tr>
       </th>
       <tbody>
-        <% for (let i = 0; i <data.length; i++) { %>
-          <tr>
-            <td><%= data[i].id %></td>
-            <td><%= data[i].first_name %></td>
-            <td><%= data[i].last_name %></td>
-            <td><%= data[i].email %></td>
-            <td><%= data[i].gender %></td>
-            <td><%= data[i].birth_date%></td>
-            <td>
-              <a href="#" class="edit">Edit</a>
-              <span>|</span>
-              <a href="#" class="remove">Remove</a>
-            </td>
-          </tr>
+        <% for (let i = 0; i < data.length; i++) { %>
+        <tr>
+          <td><%= data[i].id %></td>
+          <td><%= data[i].first_name %></td>
+          <td><%= data[i].last_name %></td>
+          <td><%= data[i].email %></td>
+          <td><%= data[i].gender %></td>
+          <td><%= data[i].birth_date%></td>
+          <td>
+            <a href="#" class="edit">Edit</a>
+            <span>|</span>
+            <a href="#" class="remove">Remove</a>
+          </td>
+        </tr>
         <% } %>
       </tbody>
     </table>
+    <button><a href="/student/add">add</a></button>
   </body>
 </html>

@@ -1,30 +1,16 @@
 [
   {
-    "id": "1",
-    "first_name": "Aditya",
+    "id": 1,
+    "first_name": "Keisha",
+    "last_name": "Azzahra",
+    "email": "keishaazzahra@mail.com",
+    "gender": "female"
+  },
+  {
+    "id": 2,
+    "first_name": "Haikal",
     "last_name": "Firdaus",
-    "email": "adityafirdaus@email.com",
+    "email": "haikalfirdaus@mail.com",
     "gender": "male"
-  },
-  {
-    "id": "2",
-    "first_name": "Ridwan",
-    "last_name": "Hafiz",
-    "email": "ridwanhafiz@email.com",
-    "gender": "male"
-  },
-  {
-    "id": "3",
-    "first_name": "Lili",
-    "last_name": "Fitriyani",
-    "email": "lilifitriyani@email.com",
-    "gender": "female"
-  },
-  {
-    "id": "4",
-    "first_name": "Alia",
-    "last_name": "Izzah",
-    "email": "aliaizzah@email.com",
-    "gender": "female"
   }
 ]

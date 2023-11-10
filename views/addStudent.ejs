@@ -10,11 +10,11 @@
         margin: 0;
       }
       .container {
-        background-color: rgb(161, 157, 157);
+        background-color: darkcyan;
         margin: auto;
         border-radius: 5px;
         width: 50%;
-        margin-top: 20px;
+        margin-top: 30px;
       }
       form {
         padding: 20px;
@@ -31,47 +31,47 @@
         height: 3rem;
         border-radius: 5px;
         outline: white;
+        padding-left: 3px;
       }
-    .button{
+      .button-add {
         margin-top: 15px;
-        background-color: blue;
-        color: white;
-        outline: none;
-        width: 8rem;
+        background-color: white;
+        color: black;
+        outline: blue;
+        width: 6rem;
         height: 2.5rem;
         border-radius: 8px;
-      }
-      .button div {
-        margin: auto;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form action="/student/add" method="POST">
         <div>
           <label for="">First Name</label>
-          <input type="text" />
+          <input type="text" name="first_name" />
         </div>
         <div>
           <label for="">Last Name</label>
-          <input type="text" />
+          <input type="text" name="last_name" />
         </div>
         <div>
           <label for="">Email</label>
-          <input type="email" />
+          <input type="email" name="email" />
         </div>
         <div>
           <label for="">Gender</label>
-          <input type="checkbox" name="" id="male" />
-          <input type="checkbox" name="" id="female" />
+          <select name="gender" id="gender">
+            <option value="select">Choose One</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </div>
         <div>
           <label for="">Birth Date</label>
-          <input type="date" name="" id="date" />
+          <input type="date" name="birth_date" id="date" />
         </div>
-        <div class="button">
-            <div>Submit</div>
+        <input class="button-add" type="submit" value="addStudent" />
       </form>
     </div>
   </body>

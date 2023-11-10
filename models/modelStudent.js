@@ -38,7 +38,43 @@ class StudentModel {
       }
     });
   }
+  static addStudent(objectStudent, cb) {
+    StudentModel.showAll((err, data) => {
+      if (err) {
+        cb(err, null);
+      } else {
+        let id = data[data.length - 1].id + 1;
+        console.log(id, "ini id student");
+        objectStudent = new Student(
+          id,
+          objectStudent.first_name,
+          objectStudent.last_name,
+          objectStudent.email,
+          objectStudent.gender,
+          objectStudent.birth_date
+        );
+        data.push(objectStudent);
+        StudentModel.saveData(data, (err, data2) => {
+          if (err) {
+            cb(err, null);
+          } else {
+            cb(null, data);
+          }
+        });
+      }
+    });
+  }
+  static saveData(data, cb) {
+    fs.writeFile("./dataStudent.json", JSON.stringify(data, null, 2), (err) => {
+      if (err) {
+        cb(err, null);
+      } else {
+        cb(null, "student has been added");
+      }
+    });
+  }
 }
+
 // const student = JSON.parse(fs.readFileSync("./dataStudent.json", "utf-8")).map(
 //   (data) => {
 //     return new Student(
