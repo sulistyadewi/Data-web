@@ -73,6 +73,38 @@ class StudentModel {
       }
     });
   }
+  static deleteData(id, cb) {
+    StudentModel.showAll((err, data) => {
+      if (err) {
+        cb(err, null)
+      } else {
+        for (let i = 0; i<data.length; i++) {
+          if (data[i].id===Number(id)) {
+            data.splice(i,1)
+          }
+        }
+        StudentModel.saveData(data, (err, data2) => {
+          if (err){
+            cb(err, null)
+          } else {
+            cb(null, data)
+          }
+        })
+      }
+    })
+  }
+  static editData(id, cb) {
+    StudentModel.showAll((err, data) => {
+      if (err) {
+        cb(err, null)
+      } else {
+        const students = data.find((list => {
+          list.id === Number(id)
+        }))
+        cb(null, students)
+      }
+    })
+  }
 }
 
 // const student = JSON.parse(fs.readFileSync("./dataStudent.json", "utf-8")).map(

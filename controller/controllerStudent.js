@@ -1,3 +1,4 @@
+const StudentModel = require("../models/modelStudent");
 const Student = require("../models/modelStudent");
 
 // console.log(student, "dari controller");
@@ -31,6 +32,26 @@ class Controller {
       }
     });
     // console.log(objectStudent);
+  }
+  static deleteStudent(req, res) {
+    const id = req.params.id
+    Student.deleteData(id, (err, data) => {
+      if (err) {
+        res.render("err")
+      } else {
+        res.redirect("/student")
+      }
+    })
+  }
+  static editStudent(req, res) {
+    const id = req.params.id
+    StudentModel.editData(id, (err, students) => {
+      if (err) {
+        res.render("err")
+      } else {
+        res.render()
+      }
+    })
   }
 }
 module.exports = Controller;
