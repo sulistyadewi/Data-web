@@ -34,24 +34,24 @@ class Controller {
     // console.log(objectStudent);
   }
   static deleteStudent(req, res) {
-    const id = req.params.id
+    const id = req.params.id;
     Student.deleteData(id, (err, data) => {
       if (err) {
-        res.render("err")
+        res.render("err");
       } else {
-        res.redirect("/student")
+        res.redirect("/student");
       }
-    })
+    });
   }
   static editStudent(req, res) {
-    const id = req.params.id
+    const id = req.params.id;
     StudentModel.editData(id, (err, students) => {
       if (err) {
-        res.render("err")
+        res.render("err");
       } else {
-        res.render()
+        res.render("editStudent");
       }
-    })
+    });
   }
 }
 module.exports = Controller;

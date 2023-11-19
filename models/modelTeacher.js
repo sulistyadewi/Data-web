@@ -73,6 +73,26 @@ class TeacherModel {
       }
     });
   }
+  static deleteData(id, cb) {
+    TeacherModel.showAll((err, data) => {
+      if (err) {
+        cb(err, null);
+      } else {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].id === Number(id)) {
+            data.plice(i, 1);
+          }
+        }
+        TeacherModel.saveData(data, (err, data2) => {
+          if (err) {
+            cb(err, null);
+          } else {
+            cb(null, data);
+          }
+        });
+      }
+    });
+  }
 }
 
 // const teacher = JSON.parse(fs.readFileSync("./dataTeacher.json", "utf-8")).map(

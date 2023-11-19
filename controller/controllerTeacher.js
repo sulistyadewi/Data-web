@@ -1,3 +1,4 @@
+const StudentModel = require("../models/modelStudent");
 const Teacher = require("../models/modelTeacher");
 
 class Controller {
@@ -11,22 +12,32 @@ class Controller {
     });
   }
   static formTeacher(req, res) {
-    res.render("addTeacher.ejs")
+    res.render("addTeacher.ejs");
   }
-  static addTeacher(req,res) {
+  static addTeacher(req, res) {
     const objectTeacher = {
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
-      gender: req.body.gender
-    }
+      gender: req.body.gender,
+    };
     Teacher.addTeacher(objectTeacher, (err, data) => {
       if (err) {
-        res.send("err")
-      }else {
-        res.redirect("/teacher")
+        res.send("err");
+      } else {
+        res.redirect("/teacher");
       }
-    })
+    });
+  }
+  static deleteTeacher(req, res) {
+    const id = req.params.id;
+    Teacher.deleteData(id, (err, data) => {
+      if (err) {
+        res.render("err");
+      } else {
+        res.redirect("/teacher");
+      }
+    });
   }
 }
 

@@ -12,5 +12,12 @@
     "last_name": "Firdaus",
     "email": "haikalfirdaus@mail.com",
     "gender": "male"
+  },
+  {
+    "id": 3,
+    "first_name": "Nayla",
+    "last_name": "Syifa",
+    "email": "naylasyifa@mail.com",
+    "gender": "female"
   }
 ]
