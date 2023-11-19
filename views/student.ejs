@@ -89,7 +89,7 @@
           <td><%= data[i].gender %></td>
           <td><%= data[i].birth_date%></td>
           <td>
-            <a href="#" class="edit">Edit</a>
+            <a href="/student/<%= data[i].id %>/edit" class="edit">Edit</a>
             <span>|</span>
             <a href="/student/<%= data[i].id %>/delete" class="remove"
               >Remove</a

@@ -76,34 +76,56 @@ class StudentModel {
   static deleteData(id, cb) {
     StudentModel.showAll((err, data) => {
       if (err) {
-        cb(err, null)
+        cb(err, null);
       } else {
-        for (let i = 0; i<data.length; i++) {
-          if (data[i].id===Number(id)) {
-            data.splice(i,1)
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].id === Number(id)) {
+            data.splice(i, 1);
           }
         }
         StudentModel.saveData(data, (err, data2) => {
-          if (err){
-            cb(err, null)
+          if (err) {
+            cb(err, null);
           } else {
-            cb(null, data)
+            cb(null, data);
           }
-        })
+        });
       }
-    })
+    });
   }
   static editData(id, cb) {
     StudentModel.showAll((err, data) => {
       if (err) {
-        cb(err, null)
+        cb(err, null);
       } else {
-        const students = data.find((list => {
-          list.id === Number(id)
-        }))
-        cb(null, students)
+        const students = data.find((list) => list.id === Number(id));
+        cb(null, students);
       }
-    })
+    });
+  }
+  static updateStudent(objectEditStudent, cb) {
+    StudentModel.showAll((err, data) => {
+      if (err) {
+        cb(err, null);
+      } else {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].id === objectEditStudent.id) {
+            (data[i].first_name = objectEditStudent.first_name),
+              (data[i].last_name = objectEditStudent.last_name),
+              (data[i].email = objectEditStudent.email),
+              (data[i].gender = objectEditStudent.gender),
+              (data[i].birth_date = objectEditStudent.birth_date);
+          }
+        }
+        StudentModel.saveData(data, (err, data2) => {
+          if (err) {
+            cb(err, null);
+          } else {
+            cb(null, data2);
+          }
+        });
+      }
+    });
   }
 }
 

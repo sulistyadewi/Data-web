@@ -49,7 +49,25 @@ class Controller {
       if (err) {
         res.render("err");
       } else {
-        res.render("editStudent");
+        res.render("editStudent", { students });
+        console.log(students, "ini students");
+      }
+    });
+  }
+  static saveEdit(req, res) {
+    const objectEditStudent = {
+      id: +req.params.id,
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      gender: req.body.gender,
+      birth_date: req.body.birth_date,
+    };
+    StudentModel.updateStudent(objectEditStudent, (err, data) => {
+      if (err) {
+        res.render("err");
+      } else {
+        res.redirect("/student");
       }
     });
   }
